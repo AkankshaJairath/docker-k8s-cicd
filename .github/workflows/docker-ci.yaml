@@ -35,7 +35,7 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          cd cdicd/app
+          cd cicd/app
           #Here we are using buildx to build the image and girhub runner number
           docker buildx build -t ${{ secrets.DOCKER_USERNAME }}/nginx-sample-app:${{ github.run_number }}-${{ env.commit_id }} .
 
